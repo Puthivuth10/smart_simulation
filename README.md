@@ -9,17 +9,16 @@ This project implements a comparative study between **Smart Traffic Light Contro
 ## Table of Contents
 
 1. [Features](#features)
-2. [System Architecture](#system-architecture)
-3. [Technologies Used](#technologies-used)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [File Structure](#file-structure)
-7. [Configuration](#configuration)
-8. [Simulation Details](#simulation-details)
-9. [Performance Metrics](#performance-metrics)
-10. [Docker Deployment](#docker-deployment)
-11. [Requirements](#requirements)
-12. [Contributors](#contributors)
+2. [Technologies Used](#technologies-used)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [File Structure](#file-structure)
+6. [Configuration](#configuration)
+7. [Simulation Details](#simulation-details)
+8. [Performance Metrics](#performance-metrics)
+9. [Docker Deployment](#docker-deployment)
+10. [Requirements](#requirements)
+11. [Contributors](#contributors)
 
 ---
 
@@ -44,47 +43,8 @@ This project implements a comparative study between **Smart Traffic Light Contro
 - **Multiple Vehicle Types**: Cars, Buses, Trucks, Bikes with different speeds and scales
 - **Vehicle Turning Logic**: Vehicles can turn at intersection with realistic behavior
 - **Real-Time Visualization**: Pygame-based graphical interface showing live traffic flow
-- **Performance Reporting**: Generates statistical reports with waiting time, crossed vehicles, and phase information
 - **Manual/Automatic Spawning**: Supports both JSON-based spawn patterns and manual vehicle generation
 - **Configurable Parameters**: Adjustable speeds, gaps, signal timings, and simulation duration
-
----
-
-## System Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                   Traffic Data Input                     │
-│              (traffic_data.txt / YOLO Output)            │
-└───────────────────────┬─────────────────────────────────┘
-                        │
-                        ▼
-┌─────────────────────────────────────────────────────────┐
-│              Signal Timing Algorithm                     │
-│  ┌──────────────────┐     ┌─────────────────────────┐  │
-│  │  Smart System    │     │  Traditional System     │  │
-│  │  (Dynamic PCU)   │     │  (Fixed 30s)            │  │
-│  └──────────────────┘     └─────────────────────────┘  │
-└───────────────────────┬─────────────────────────────────┘
-                        │
-                        ▼
-┌─────────────────────────────────────────────────────────┐
-│              Pygame Simulation Engine                    │
-│  • Vehicle Spawning & Movement                           │
-│  • Collision Detection                                   │
-│  • Traffic Signal Control                                │
-│  • Visual Rendering                                      │
-└───────────────────────┬─────────────────────────────────┘
-                        │
-                        ▼
-┌─────────────────────────────────────────────────────────┐
-│              Performance Analysis                        │
-│  • Average Waiting Time                                  │
-│  • Vehicles Crossed Count                                │
-│  • Green Time per Phase                                  │
-│  • Report Generation (PNG/Console)                       │
-└─────────────────────────────────────────────────────────┘
-```
 
 ---
 
